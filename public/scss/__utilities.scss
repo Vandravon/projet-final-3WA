@@ -1,0 +1,123 @@
+$colors: light, dark, primary, secondary, tertiary;
+
+/* ========================= */
+/* ========== TEXT ========= */
+/* ========================= */
+
+@each $color in $colors { .text-#{$color} { color: var(--color-#{$color}); } };
+
+.text-small { font-size: 75%; }
+.text-big { font-size: 150%; }
+
+.text-upper { text-transform: uppercase; }
+.text-lower { text-transform: lowercase; }
+
+.text-thin { font-weight: 200; }
+.text-bold { font-weight: 700; }
+
+/* =========================== */
+/* ========== FONDS ========== */
+/* =========================== */
+@each $color in $colors { .bg-#{$color} { background-color: var(--color-#{$color}) }};
+
+
+/* ============================= */
+/* ========== SPACINGS ========= */
+/* ============================= */
+
+/* MARGIN */
+.m-none { margin: 0; }
+
+.mt-small { margin-top: var(--spacingd2); }
+.mt-big { margin-top: var(--spacingx2); }
+
+.mb-small { margin-bottom: var(--spacingd2); }
+.mb-big { margin-bottom: var(--spacingx2); }
+
+.ml-small { margin-left: var(--spacingd2); }
+.ml-big { margin-left: var(--spacingx2); }
+
+.mr-small { margin-right: var(--spacingd2); }
+.mr-big { margin-right: var(--spacingx2); }
+
+.my-small {
+  margin-top: var(--spacingd2);
+  margin-bottom: var(--spacingd2);
+}
+.my-big {
+  margin-top: var(--spacingx2);
+  margin-bottom: var(--spacingx2);
+}
+
+.mx-small {
+  margin-left: var(--spacingd2);
+  margin-right: var(--spacingd2);
+}
+.mx-big {
+  margin-left: var(--spacingx2);
+  margin-right: var(--spacingx2);
+}
+
+.m-small { margin: var(--spacingd2); }
+.m-big { margin: var(--spacingx2); }
+
+/* PADDING */
+.p-none { padding: 0; }
+
+.pt-small { padding-top: var(--spacingd2); }
+.pt-big { padding-top: var(--spacingx2); }
+
+.pb-small { padding-bottom: var(--spacingd2); }
+.pb-big { padding-bottom: var(--spacingx2); }
+
+.pl-small { padding-left: var(--spacingd2); }
+.pl-big { padding-left: var(--spacingx2); }
+
+.pr-small { padding-right: var(--spacingd2); }
+.pr-big { padding-right: var(--spacingx2); }
+
+.py-small {
+  padding-top: var(--spacingd2);
+  padding-bottom: var(--spacingd2);
+}
+.py-big {
+  padding-top: var(--spacingx2);
+  padding-bottom: var(--spacingx2);
+}
+
+.px-small {
+  padding-left: var(--spacingd2);
+  padding-right: var(--spacingd2);
+}
+.px-big {
+  padding-left: var(--spacingx2);
+  padding-right: var(--spacingx2);
+}
+
+.p-small { padding: var(--spacingd2); }
+.p-big { padding: var(--spacingx2); }
+
+/* GAP */
+.g-none {
+  gap: 0;
+}
+.g-small {
+  gap: var(--spacingd2);
+}
+.g-big {
+  gap: var(--spacingx2);
+}
+
+/* =========================== */
+/* ========== IMAGES ========= */
+/* =========================== */
+.img-full {
+  width: 100%;
+}
+
+/* ========================= */
+/* ========== FLEX ========= */
+/* ========================= */
+.flex { display: flex; }
+.align-center { align-items: center; }
+.justify-center { justify-content: center; }

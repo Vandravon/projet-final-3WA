@@ -1,0 +1,66 @@
+/* ============================== */
+/* ========== CONTAINER ========= */
+/* ============================== */
+
+.container {
+    max-width: 575px;
+    margin: 0 auto;
+    padding: var(--spacing);
+  }
+
+  @media (min-width: 576px) and (max-width: 767px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+  }
+
+  
+  /* =========================== */
+  /* ========== GRILLE ========= */
+  /* =========================== */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--spacing);
+  }
+  
+  .grid > * {
+    grid-column: span 12;
+  }
+  
+  $columns: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11;
+
+  @each $column in $columns {
+    .col-#{$column} { grid-column: span #{$column}; }
+  }
+  
+  /* MEDIA QUERIES */
+  @media screen and (min-width: 768px) {
+    @each $column in $columns {
+      .col-m-#{$column} { grid-column: span #{$column} }
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    @each $column in $columns {
+      .col-l-#{$column} { grid-column: span #{$column} }
+    }
+  }

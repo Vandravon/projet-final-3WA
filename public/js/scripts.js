@@ -1,0 +1,37 @@
+const theme = document.getElementById('theme');
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Permet de changer le thème du site, de passer du thème clair au thème foncé
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Ecouteur d'évènement, qui lorsque l'on change l'état du bouton dans la Nav bar (en réalité une checkbox),
+// rajoute la classe dark au Body du document
+
+// Pour rappel:
+// body.dark {
+//  background-color: var(--color-dark);
+//  color: var(--color-light);
+// }
+
+
+theme.addEventListener('change', () => {
+  document.body.classList.toggle('dark');
+})
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Permet d'afficher ou non le menu burger quand on clique dessus
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function toggleFunc(e) {
+  e.classList.toggle("change");
+  document.getElementById("btn-toggle")
+    .classList
+    .toggle("show");
+}

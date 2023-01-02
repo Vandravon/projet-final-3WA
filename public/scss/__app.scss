@@ -1,0 +1,627 @@
+/* ==================================== */
+/* ==================================== */
+/*          STYLE PAR DEFAUT            */
+/* ==================================== */
+/* ==================================== */
+
+h1 {
+  margin-left: 0.5em;
+}
+
+ul {
+  list-style: none;
+  padding-left: 5%;
+}
+
+.form-container {
+  padding: 30px 10px;
+  color: var(--color-dark);
+  background-color: var(--color-tertiary);
+}
+
+.form-label {
+  padding: 0.8rem;
+}
+
+.form-input {
+  margin: 1em;
+  padding: 0.5rem 0.5rem;
+  border-radius: var(--border-radius);
+}
+
+.form-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
+  padding: 8px 20px;
+  border: 1px solid var(--color-dark);
+  border-radius: var(--border-radius);
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+}
+
+.form-submit:hover {
+  opacity: 90%;
+  margin-left: 2.1em;
+}
+
+input:invalid {
+  box-shadow: inset 0 0 5px 1px rgba(214, 60, 60, 0.521);
+}
+
+input:focus:invalid {
+  box-shadow: inset 0 0 5px 1px rgb(224, 18, 18);
+}
+
+/* ==================================== */
+/* ==================================== */
+/*               HEADER                 */
+/* ==================================== */
+/* ==================================== */
+
+/* ========================== */
+/* ====== BURGER MENU ======= */
+/* ========================== */
+
+/* Panneau et son contenu */
+
+.top-ul {
+  margin: 40% 0 70%;
+  }
+  
+  li a {
+  color: var(--color-light);
+  margin: 0 0 10px 0;
+  font-size: 1.4em;
+  }
+  
+  li a:hover {
+  color: var(--color-primary);
+  cursor: pointer;
+  }
+  
+  nav ul li {
+  margin-bottom: 1em;
+  }
+  
+  .nav-li-disabled {
+  color: var(--color-light);
+  margin: 0 0 10px 0;
+  cursor: not-allowed;
+  opacity: 0.8;
+  font-size: 1.4em;
+  }
+  
+  .nav-menu {
+  position: fixed;
+  z-index: 1;
+  width: 230px;
+  height: 100%;
+  background: var(--color-dark);
+  border-right: solid 1px var(--color-primary);
+  
+  left: -230px;
+  
+  transition: all 0.2s ease-out;
+  }
+  
+  .show {
+  left: 0px;
+  }
+  
+  /* Les barres du Menu Burger: de 3 parallèles à 2 en croix */
+  .burger-menu-container {
+  display: flex;
+  justify-content: flex-start;
+  }
+  
+  .nav-menu-btn {
+  display: block;
+  cursor: pointer;
+  z-index: 1;
+  padding: 6px 0;
+  }
+  
+  .bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background: var(--color-dark);
+  margin: 0px 10px 6px;
+  transition: 0.4s;
+  }
+  
+  .change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+  background: var(--color-light);
+  }
+  
+  .change .bar2 {
+  opacity: 0;
+  }
+  
+  .change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+  background: var(--color-light);
+  }
+
+
+
+/* ========================== */
+/* ==== BOUTON ACCUEIL ====== */
+/* ========================== */
+
+.btn-home {
+  width: 90%;
+  cursor: pointer;
+  padding: calc(var(--spacing) / 4) var(--spacingd2);
+  text-align: center;
+  line-height: 0.7em;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+  border-color: var(--color-secondary);
+  background-color: var(--color-primary);
+  color: var(--color-light);
+}
+
+
+
+/* ========================== */
+/*  TOGGLE DARK/LIGHT THEME   */
+/* ========================== */
+
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.dark {
+background-color: var(--color-dark);
+color: var(--color-light);
+}
+
+.label-theme {
+background-color: var(--color-dark);
+display: flex;
+height: 26px;
+width: 48px;
+border-radius: 30px;
+position: relative;
+align-items: center;
+justify-content: space-between;
+padding: 5px;
+transform: scale(1.5);
+}
+
+.theme {
+opacity: 0;
+position: absolute;
+}
+
+.ball {
+height: 22px;
+width: 22px;
+background-color: #fff;
+position: absolute;
+top: 2px;
+left: 2px;
+border-radius: 50%;
+transition: left .2s linear;
+}
+
+.theme:checked + .label-theme .ball {
+/*transform: translateX(24px);*/
+left: 24px;
+}
+
+
+.fa-moon {
+color: #f1c40f;
+}
+
+.fa-sun {
+color: #f39c12;
+}
+
+
+/* ========================== */
+/* = INDICATEUR  CONNECTION = */
+/* ========================== */
+
+.nickname-navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--color-dark);
+}
+
+.nickname {
+  width: 85px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media (min-width: 400px) {
+  .nickname {
+    width: 105px;
+  }
+}
+
+@media (min-width: 768px) {
+  .nickname {
+    width: 200px;
+  }
+}
+
+
+
+/* ==================================== */
+/* ==================================== */
+/*             MAIN  INDEX              */
+/* ==================================== */
+/* ==================================== */
+
+/*Nom du site stylisé*/
+.reminder {
+  font-family: var(--typo-title);
+  font-size: 3rem;
+}
+
+.container {
+  padding: 0;
+}
+
+.presentation-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-tertiary);
+  color: var(--color-dark);
+  width: 90%;
+  padding: calc(var(--spacing)*2);
+  margin: 0 auto;
+  border-radius: var(--border-radius);
+  line-height: 2rem;
+  font-size: var(--font-size); 
+}
+
+
+
+/* ========================== */
+/* ======== CAROUSEL ======== */
+/* ========================== */
+
+.carousel-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container {
+  padding: 1%;
+  background-color: var(--color-secondary);
+  border-radius: 10px;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+      0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-container img {
+  width: 100%;
+}
+
+.btn-carousel {
+  height: 53px;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  padding: 1em;
+  display: flex;
+}
+
+.btn-carousel .arrow {
+  border: solid #fff;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 10px;
+  transition: transform 0.3s ease-out;
+  outline: none;
+}
+
+#right-btn {
+  margin: auto 0 auto -4em;
+}
+
+#right-btn .arrow {
+  transform: rotate(-45deg);
+}
+
+#left-btn {
+  z-index: 0;
+  margin: auto -4em auto 0;
+}
+
+#left-btn .arrow {
+  transform: rotate(135deg);
+}
+
+
+
+/* ==================================== */
+/* ==================================== */
+/*           BOOKMARK INDEX             */
+/* ==================================== */
+/* ==================================== */
+
+/* Boutons ajouter un favori */
+.btn-add {
+  width: 45%;
+}
+
+.add-buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-buttons-container a {
+  line-height: 1.2em;
+}
+
+/* ========================== */
+/* ===== CARDS BOOKMARK ===== */
+/* ========================== */
+
+/* Boutons de chaque favori */
+
+.btn-bookmark-edit {
+  position: absolute;
+  top: 0px;
+  right: 3px;
+  color: var(--color-success);
+  font-size: 36px;
+}
+
+.btn-bookmark-edit-text {
+  position: absolute;
+  top: 14px;
+  right: 17px;
+  color: var(--color-light);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.btn-bookmark-delete {
+  position: absolute;
+  bottom: 0px;
+  right: 5px;
+  color: var(--color-danger);
+  font-size: 30px;
+}
+
+/* Card des favoris */
+
+.bookmark-card {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  background-color: var(--color-tertiary);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+.bookmark-card:hover {
+box-shadow: 0px 2px 8px 2px var(--color-secondary);
+}
+
+.bookmark-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing) 0;
+  height: 100%;
+  width: 100%;
+}
+
+.bookmark-container div {
+  color: var(--color-dark);
+  text-align: center;
+}
+
+.bookmark-title {
+  margin-top: 17px;
+  margin-left: 10px;
+  width: 145px;
+  height: 18%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.bookmark-title::first-letter {
+  text-transform: capitalize;
+}
+
+.bookmark-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35%;
+  width: 100%;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.bookmark-image img {
+  height: 95%;
+  width: 95%;
+  object-fit: contain;
+}
+
+/* Tags du favori */
+
+.bookmark-name {
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-bookmark-names {
+  position: absolute;
+  bottom: 5px;
+  left: 3px;
+  color: var(--color-success);
+  font-size: 0.9em;
+}
+
+/* Responsive pour les favoris */
+
+@media (min-width: 400px) {
+  .btn-bookmark-edit {
+    top: 2px;
+    right: 10px;
+  }
+  .btn-bookmark-edit-text {
+    top: 16px;
+    right: 23px;
+  }
+  .btn-bookmark-delete {
+    bottom: 5px;
+    right: 15px;
+  }
+  .bookmark-title {
+    width: 185px;
+    font-size: 1.2em;
+  }
+  .bookmark-image {
+    height: 45%;
+  }
+  .bookmark-name {
+    height: 25%;
+  }
+  .btn-bookmark-names {
+    position: absolute;
+    bottom: 7px;
+    left: 12px;
+  }
+  .btn-bookmark-names {
+    font-size: 1.1em;
+  }
+}
+
+@media (min-width: 768px) {
+  .bookmark-container {
+    padding: var(--spacing);
+  }
+  .bookmark-title {
+    width: 245px;
+    font-size: 1.3em;
+  }
+}
+
+
+
+/* ==================================== */
+/* ==================================== */
+/*           ADMINISTRATION             */
+/* ==================================== */
+/* ==================================== */
+
+.admin-container {
+  background-color: var(--color-tertiary);
+  padding: var(--spacing) var(--spacingd2);
+  color: var(--color-dark);
+}
+
+.admin-container > div {
+  padding: var(--spacing) 0;
+}
+
+.admin-container h2 {
+  display: inline-block;
+  margin-top: var(--spacing);
+}
+
+.admin-users-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid var(--color-dark);
+  padding: var(--spacingd2) 0;
+}
+
+.admin-users-list:first-child {
+  border-top: 1px solid var(--color-dark);
+}
+
+.admin-users-list div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-contacts-list {
+  padding: var(--spacingd2) 0;
+}
+
+
+
+/* ==================================== */
+/* ==================================== */
+/*           BORED    ADMIN             */
+/* ==================================== */
+/* ==================================== */
+
+.bored-container {
+  color: var(--color-dark);
+}
+
+.bored-container p {
+  border-top: 1px solid var(--color-dark);
+  border-bottom: 1px solid var(--color-dark);
+}
+
+
+
+/* ==================================== */
+/* ==================================== */
+/*               FOOTER                 */
+/* ==================================== */
+/* ==================================== */
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+  padding: 10px 0;
+  color: var(--color-dark);
+}
+
+footer p {
+  display: inline-block;
+  width: 40%;
+  text-align: center;
+}
+
+footer div {
+  text-align: right;
+}
